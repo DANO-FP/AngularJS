@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp"><!--CONTENGO UN DOCUMENTO ANGULARJS-->
+<head>
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript" src="ANGULARJS-4.js"></script>
+</head>
+<body ng-controller="FirstController">
+	<input type="text" ng-model="nombre">
+	{{"Hola "+ nombre}}
+<!-- sincroniza el valor de la caja a el nombre de la variable, se actualiza en cualquier parte de la visa.-->
+	<li ng-repeat="comentario in comentarios">
+		{{comentario.comentario}} -<strong>{{comentario.username}}</strong>
+	</li>
+	<input type="text" ng-model="nuevoComentario.comentario"></br>
+	<input type="text" ng-model="nuevoComentario.username"></br>
+	<button ng-click="agregarComentario()">Agregar Comentario</button>
+</body>
+</html>
+<!--
+ng-Repeat es como un foreach
+HACE UN LOOP Y LOS PASA COMO LO MARCAS.-->

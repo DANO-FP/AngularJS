@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp"><!--CONTENGO UN DOCUMENTO ANGULARJS Y LINKEO EL MODULO QUE CREO PARA USAR-->
+<head>
+	<title>Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+	<script type="text/javascript" src="ANGULARJS-6.js"></script><!--LINKEO EL ARCHIVO CON MIS MODULOS.-->
+</head>
+<body ng-controller="FirstController">
+<input type="text" ng-model="newpost.title" /></br>
+<textarea ng-model="newpost.body"></textarea>
+<button ng-click="newPost()">Agregar</button>
+<!--LINKEO CON EL CONTROLADOR QUE CREE EN MI MODULO-->
+<li ng-repeat="posts in posts">
+<!--NG-REPEAT
+ES COMO SI FUERA UN FOREACH, RECORRE TODO EL ARRAY DEL CONTROLADOR Y LO REPITE DATO POR DATO.
+POSTS IN POSTS ES DECIR RECORRE LOS 'OBJETOS DATOS'
+DENTRO DEL ARRAY-->
+	<h2>
+		{{posts.title}}<!--SINTAXIS ANGULAR QUE TRAE EL ATRIBUTO TITLE DEL OBJETO POSTS-->
+	</h2>
+	<p>
+		{{posts.body}}
+	</p>
+</li>
+</body>
+</html>
